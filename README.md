@@ -10,7 +10,7 @@ by adding `remsh` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:remsh, git: "https://github.com/robertov8/remsh.git", tag: "0.1.0"}
+    {:remsh, git: "https://github.com/robertov8/remsh.git", tag: "0.1.1"}
   ]
 end
 ```
