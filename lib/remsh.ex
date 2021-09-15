@@ -55,7 +55,15 @@ defmodule REMSH do
   end
 
   defp output(:undefined, _data, node), do: IO.puts("#{node} not registered!")
-  defp output(device, data, _node), do: IO.inspect(device, data, label: "#{node()}")
+
+  defp output(device, data, _node) do
+    date_now =
+      NaiveDateTime.utc_now()
+      |> NaiveDateTime.truncate(:second)
+      |> NaiveDateTime.to_string()
+
+    IO.inspect(device, data, label: "#{date_now} #{node()}")
+  end
 
   defp get_node(name \\ node()) do
     name

@@ -10,7 +10,7 @@ by adding `remsh` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:remsh, git: "https://github.com/robertov8/remsh.git", tag: "0.1.1"}
+    {:remsh, git: "https://github.com/robertov8/remsh.git", tag: "0.1.2"}
   ]
 end
 ```
@@ -18,8 +18,8 @@ end
 ## Usage
 ```bash
 iex --name server@localhost -S mix
-# Optional
-iex(server@localhost)1> REMSH.register()
+
+iex(server@localhost)1> REMSH.register() # Optional
 iex(server@localhost)2> REMSH.inspect("Hello World")
 ```
 
