@@ -62,7 +62,7 @@ defmodule REMSH do
       |> NaiveDateTime.truncate(:second)
       |> NaiveDateTime.to_string()
 
-    IO.inspect(device, data, label: "#{date_now} #{node()}")
+    IO.inspect(device, data, label: "#{date_now} #{node()}", limit: :infinity)
   end
 
   defp get_node(name \\ node()) do
