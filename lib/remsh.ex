@@ -43,6 +43,8 @@ defmodule REMSH do
     else
       IO.puts("There are no clients connected!")
     end
+
+    data
   end
 
   defp do_inspect(node, data) do
